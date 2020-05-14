@@ -10,9 +10,10 @@ function getThings(){
     .then((res) => res.json())
     .then((data) => {
         let output = `
+            <h1> Meaning</h1>
             <p>${data[1].text}</p>
         `;
-        console.log(output);
+        document.getElementById('displaySearch').innerHTML = output;
     })
 }
 
